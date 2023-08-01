@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Create</title>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- * MAIN CONTAINER START -->
@@ -12,6 +15,24 @@
     <h1>
       All Users
     </h1>
+    <table>
+      <thead>
+        <tr>
+          <td>first name</td>
+          <td>last name</td>
+          <td>email</td>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in users %}
+        <tr>
+          <td> {{user.first_name}} </td>
+          <td> {{user.last_name}} </td>
+          <td> {{user.email}} </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </main>
   <!-- * MAIN CONTAINER END -->
 </body>

@@ -5,20 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Create</title>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- * MAIN CONTAINER START -->
   <main class="container">
     <h1>Add a new user</h1>
     <!-- * FORM START -->
-    <form action="/users">
-      <label for="first_name">First Name</label>
-      <input type="text" name="" id="first_name">
-      <label for="last_name">Last Name</label>
-      <input type="text" name="" id="last_name">
-      <label for="email">Email</label>
-      <input type="email" name="" id="email">
-      <input type="submit" value="create user">
+    <form 
+    class="" 
+    action="/users/create"
+    method="post">
+      <div 
+      class="flex col">
+        <label for="first_name">First Name</label>
+        <input class="input-field" type="text" name="first_name" id="first_name" placeholder="first name">
+      </div>
+      <div class="flex col">
+        <label for="last_name">Last Name</label>
+          <input class="input-field" type="text" name="last_name" id="last_name" placeholder="last name">
+      </div>
+      <div class="flex col">
+        <label for="email">Email</label>
+        <input class="input-field" type="email" name="email" id="email" placeholder="email">
+      </div>
+      
+      
+      <div class="">
+  
+        <input class="submit-btn" type="submit" value="create user">
+      </div>
     </form>
     <!-- * FORM END -->
   </main>

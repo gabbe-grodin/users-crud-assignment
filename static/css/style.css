@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Ysabeau Office', sans-serif;
   background-color: black;
   color: chartreuse;
 }
@@ -10,7 +10,90 @@
 .container {
   width: 500px;
   height: 1000px;
-  margin: 20px auto;
-  background-color: darkblue;
-  line-height: 2em;
+  margin: 0px auto;
+  padding-top: 20px;
+  /* background-color: darkblue; */
+  /* line-height: 2em; */
+}
+
+.input-field {
+  background-color: chartreuse;
+  color: black;
+  height: 40px;
+  border-radius: 10px;
+  padding-left: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.submit-btn {
+  margin-top: 40px;
+  height: 40px;
+  border-radius: 10px;
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: rgb(235, 153, 153);
+  width: 100%;
+  clear: both;
+}
+
+table {
+  width: 100%;
+  background-color: gray;
+  margin-top: 20px;
+}
+
+thead * {
+  color: black;
+  background-color: rgb(187, 147, 147);
+}
+
+td {
+  padding: 5px;
+}
+
+    /** DISPLAY **/
+
+.flex {
+  display: flex;
+}
+
+.flex-1 {
+  flex: 2;
+}
+
+.db {
+  display: block;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.p2 {
+  padding: 1em;
+}
+
+    /** BORDER **/
+
+.br-10-px {
+  border-radius: 10px;
+}
+
+    /** BACKGROUND COLOR **/
+
+.bg-lt-pink {
+  background-color: rgb(255, 189, 200);
+}
+
+    /** FONTS **/
+
+.dk-blue {
+  color: rgb(8, 8, 62);
+}
+
+.f5 {
+  font-size: large;
+  font-weight: bolder;
 }
