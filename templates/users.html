@@ -3,37 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Create</title>
+  <title>Read (all)</title>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- * MAIN CONTAINER START -->
+  <!--! MAIN CONTAINER START -->
   <main class="container">
     <h1>
       All Users
     </h1>
+    <!-- ! TABLE START -->
     <table>
       <thead>
         <tr>
+          <td>id</td>
           <td>first name</td>
           <td>last name</td>
           <td>email</td>
+          <td>actions</td>
         </tr>
       </thead>
       <tbody>
         {% for user in users %}
-        <tr>
-          <td> {{user.first_name}} </td>
-          <td> {{user.last_name}} </td>
-          <td> {{user.email}} </td>
+        <tr class="rowhov">
+          <td class="cntr-txt">
+            {{ user.id }}
+          </td>
+          <td>
+            {{ user.first_name }}
+          </td>
+          <td>
+            {{ user.last_name }}
+          </td>
+          <td>
+            {{ user.email }}
+          </td>
+          <td class="cntr-txt">
+            <a href="/user/{{ user.id }}">
+              <span>
+                show
+              </span>
+            </a>
+            <span>
+              |
+            </span>
+            <a href="/update/{{ user.id }}">
+              <span>
+                edit
+              </span>
+              <span>
+                |
+              </span>
+            </a>
+            <a href="/delete/user/{{ user.id }}">
+              <span>
+                delete
+              </span>
+            </a>
+          </td>
         </tr>
         {% endfor %}
       </tbody>
     </table>
+    <!-- ! TABLE END -->
+      <a href="/">
+        <button class="btn" type="button">
+          add a new user
+        </button>
+      </a>
   </main>
-  <!-- * MAIN CONTAINER END -->
+  <!-- ! MAIN CONTAINER END -->
 </body>
 </html>

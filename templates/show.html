@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read (one)</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ! MAIN CONTAINER START -->
+  <main class="container">
+    <h3 class="p2tb">
+      User ID {{ user.id }}
+    </h3>
+    <div class="p2tb">
+      <p class="p2tb">
+        Name
+      </p>
+      <h2>
+        {{ user.first_name }} {{ user.last_name }}
+      </h2>
+    </div>
+    
+    <div class="p2tb">
+      <p class="p2tb">
+        Email
+      </p>
+      <h2>
+        {{ user.email }}
+      </h2>
+    </div>
+    
+    <div>
+      <a href="/update/{{ user.id }}">
+        <button class="btn">
+          update user info
+        </button>
+      </a>
+    </div>
+    <div>
+      <a href="/users">
+        <button class="btn">
+          home
+        </button>
+      </a>
+    </div>
+  </main>
+  <!-- ! MAIN CONTAINER END -->
+</body>
+</html>

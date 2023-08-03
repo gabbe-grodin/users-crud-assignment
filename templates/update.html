@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- * MAIN CONTAINER START -->
+  <main class="container">
+    <h1>
+      Update {{ user.first_name }}'s info
+    </h1>
+
+    <!-- * FORM START -->
+
+    <form 
+      action="/update/user"
+      method="POST">
+      
+      <input 
+        type="hidden" 
+        name="id" 
+        value="{{ user.id }}">
+
+      <div>
+        <label 
+          for="first_name" 
+          class="flex col">
+            First Name
+          <input 
+            class="input-field" 
+            type="text" 
+            name="first_name" 
+            id="first_name" 
+            value="{{ user.first_name }}">
+        </label>
+      </div>
+      <div 
+        class="flex col">
+        <label 
+          for="last_name">
+            Last Name
+        </label>
+          <input 
+            class="input-field" 
+            type="text" 
+            name="last_name" 
+            id="last_name" 
+            value="{{ user.last_name }}">
+      </div>
+      <div 
+        class="flex col">
+          <label 
+            for="email">
+              Email
+          </label>
+          <input 
+            class="input-field" 
+            type="email" 
+            name="email" 
+            id="email" 
+            value="{{ user.email }}">
+      </div>
+      <div class="">
+        <button 
+          class="submit-btn"        type="submit">
+            update user info
+        </button>
+      </div>
+      <div>
+        <a href="/">
+          <p 
+            class="btn" 
+            type="button">
+              home
+          </p>
+        </a>
+      </div>
+      <div>
+        <a href="/delete/user/{{ user.id }}">
+          <p 
+            class="btn" 
+            type="button">
+              delete user
+          </p>
+        </a>
+      </div>
+    </form>
+    <!-- ! FORM END -->
+  </main>
+  <!-- !MAIN CONTAINER END -->
+</body>
+</html>
