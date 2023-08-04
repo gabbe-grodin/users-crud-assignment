@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ysabeau Office', sans-serif;
+  color: rgb(237, 255, 155);
+}
+
+body {
+  background-color: rgb(59, 64, 86);
+  /* background-color: rgb(0, 0, 82); */
+  font-size: 18px;
+}
+
+.container {
+  width: 800px;
+  height: 1500px;
+  margin: 0px auto;
+  padding-top: 20px;
+  line-height: 2em;
+}
+
+.input-field {
+  background-color: rgb(251, 255, 233);
+  color: black;
+  height: 50px;
+  border-radius: 10px;
+  margin: 10px 0;
+  padding-left: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.form-submitter {
+  background-color: #e9a5a5;
+  width: 100%;
+}
+
+.btn {
+  text-align: center;
+  margin-top: 40px;
+  height: 50px;
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #e9a5a5;
+  width: 100%;
+  border-radius: 35px;
+  border-style: 5px outset;
+  box-shadow: 10px 10px rgb(33, 33, 33);
+}
+
+.btn:hover {
+  background-color: #97ef96;  border-style: 20px inset black;
+  box-shadow: 5px 5px rgb(0, 0, 0);
+}
+
+h1 {
+  margin: 20px 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.brtl {
+  border-top-left-radius: 20px;
+}
+
+.brtr {
+  border-top-right-radius: 20px;
+}
+
+.brbl {
+  border-bottom-left-radius: 20px;
+}
+
+.brbr {
+  border-bottom-right-radius: 20px;
+}
+
+thead {
+  background-color: rgb(15, 90, 57);
+  font-size: 25px;
+}
+
+thead tr td {
+  padding: 20px 0 10px 20px;
+  /* text-align: center; */
+}
+
+tbody tr td {
+  /* border-top: 1px dotted rgb(33, 18, 255); */
+  padding-bottom: 10px;
+}
+
+table tbody td {
+  /* padding: 10px; */
+  background-color: rgb(85, 67, 67);
+
+}
+
+tbody tr:hover td {
+  background-color: rgb(0, 60, 40);
+  text-shadow: 5px 5px black;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+.cntr-txt {
+  text-align: center;
+}
+
+    /** DISPLAY **/
+
+.flex {
+  display: flex;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.p2tb {
+  padding: 1em 0;
+}
+
+.p2rl {
+  padding: 0 22px;
+}
+
+.p12 {
+  padding: 12px;
+}

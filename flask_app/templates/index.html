@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Ysabeau+Office:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- ? TODOs: rerouting to /users adds new users; make table rows glow on hover;  -->
   <!--! MAIN CONTAINER START -->
   <main class="container">
     <h1>
@@ -65,17 +64,20 @@
       <!--! SUBMIT BUTTON -->
       <div>
         <input 
-          class="submit-btn" 
+          class="form-submitter btn" 
           type="submit" 
           value="create user">
       </div>
+    </form>
+    <!--! FORM END -->
+    <div>
       <a href="/users">
-        <button class="btn">
+        <button class="btn" type="button">
           list of users
         </button>
       </a>
-    </form>
-    <!--! FORM END -->
+    </div>
+    
   </main>
   <!--! MAIN CONTAINER END -->
 </body>

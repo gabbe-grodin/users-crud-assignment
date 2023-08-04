@@ -17,18 +17,18 @@
     </h1>
     <!-- ! TABLE START -->
     <table>
-      <thead>
+      <thead class="p2rl">
         <tr>
-          <td>id</td>
+          <td class="brtl">id</td>
           <td>first name</td>
           <td>last name</td>
           <td>email</td>
-          <td>actions</td>
+          <td class="brtr">actions</td>
         </tr>
       </thead>
       <tbody>
         {% for user in users %}
-        <tr class="rowhov">
+        <tr>
           <td class="cntr-txt">
             {{ user.id }}
           </td>
@@ -41,7 +41,7 @@
           <td>
             {{ user.email }}
           </td>
-          <td class="cntr-txt">
+          <td class="">
             <a href="/user/{{ user.id }}">
               <span>
                 show
@@ -74,7 +74,7 @@
           add a new user
         </button>
       </a>
-  </main>
+  </main> 
   <!-- ! MAIN CONTAINER END -->
 </body>
 </html>
