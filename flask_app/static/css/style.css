@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Ysabeau Office', sans-serif;
-  color: rgb(237, 255, 155);
+  color: rgb(251, 254, 237);
 }
 
 body {
@@ -31,11 +31,6 @@ body {
   font-weight: bold;
 }
 
-.form-submitter {
-  background-color: #e9a5a5;
-  width: 100%;
-}
-
 .btn {
   text-align: center;
   margin-top: 40px;
@@ -43,16 +38,24 @@ body {
   color: black;
   font-size: 25px;
   font-weight: bold;
-  background-color: #e9a5a5;
+  background-color: #ffd4d4;
   width: 100%;
   border-radius: 35px;
-  border-style: 5px outset;
-  box-shadow: 10px 10px rgb(33, 33, 33);
+  border-style: 20px outset;
+  border: none;
+  box-shadow: 10px 10px rgb(27, 27, 76);
 }
 
 .btn:hover {
-  background-color: #97ef96;  border-style: 20px inset black;
-  box-shadow: 5px 5px rgb(0, 0, 0);
+  background-color: #c3fbc2; 
+  border-style: 20px inset black;
+  box-shadow: 3px 3px rgb(0, 0, 0);
+  transform: scale(0.98);
+}
+
+.btn:active {
+  box-shadow: 3px 3px rgb(0, 0, 0);
+  transform: scale(0.98);
 }
 
 h1 {
@@ -87,11 +90,12 @@ table {
 }
 
 thead {
-  background-color: rgb(15, 90, 57);
+  background-color: rgb(12, 26, 54);
   font-size: 25px;
 }
 
 thead tr td {
+  color: rgb(211, 255, 240);
   padding: 20px 0 10px 20px;
   /* text-align: center; */
 }
@@ -103,15 +107,14 @@ tbody tr td {
 
 table tbody td {
   /* padding: 10px; */
-  background-color: rgb(85, 67, 67);
+  background-color: rgb(118, 118, 118);
 
 }
 
 tbody tr:hover td {
-  background-color: rgb(0, 60, 40);
-  text-shadow: 5px 5px black;
+  background-color: rgb(27, 49, 42);
+  transform: scale(1.18);
 }
-
 
 a {
   text-decoration: none;
@@ -122,6 +125,7 @@ a {
 }
 
     /** DISPLAY **/
+
 
 .flex {
   display: flex;
