@@ -14,6 +14,9 @@ def create_user():
     session['last_name'] = request.form['last_name']
     session['email'] = request.form['email']
     # print("before!!!!!!!!!")
+    # check if form has valid info:
+    if not User.validate_user(request.form):
+        return redirect("/")
     User.create_user(request.form)
     # print("after!!!!!!!!!!!!")
     return redirect("/users")

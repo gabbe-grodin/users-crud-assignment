@@ -16,58 +16,61 @@
       All Users
     </h1>
     <!-- ! TABLE START -->
-    <table>
-      <thead class="p2rl">
-        <tr>
-          <td class="brtl">id</td>
-          <td>first name</td>
-          <td>last name</td>
-          <td>email</td>
-          <td class="brtr">actions</td>
-        </tr>
-      </thead>
-      <tbody>
-        {% for user in users %}
-        <tr>
-          <td class="cntr-txt">
-            {{ user.id }}
-          </td>
-          <td>
-            {{ user.first_name }}
-          </td>
-          <td>
-            {{ user.last_name }}
-          </td>
-          <td>
-            {{ user.email }}
-          </td>
-          <td class="">
-            <a href="/user/{{ user.id }}">
-              <span>
-                show
-              </span>
-            </a>
-            <span>
-              |
-            </span>
-            <a href="/update/{{ user.id }}">
-              <span>
-                edit
-              </span>
+    <div>
+      <table class="cntr-txt">
+        <thead>
+          <tr>
+            <td class="w-5">id</td>
+            <td class="w-15">first name</td>
+            <td class="w-15">last name</td>
+            <td class="w-25">email</td>
+            <td class="w-35">actions</td>
+          </tr>
+        </thead>
+        <tbody>
+          {% for user in users %}
+          <tr>
+            <td class="w-5">
+              {{ user.id }}
+            </td>
+            <td class="w-15">
+              {{ user.first_name }}
+            </td>
+            <td class="w-15">
+              {{ user.last_name }}
+            </td>
+            <td class="w-25">
+              {{ user.email }}
+            </td>
+            <td class="w-35">
+              <a href="/user/{{ user.id }}">
+                <span>
+                  show
+                </span>
+              </a>
               <span>
                 |
               </span>
-            </a>
-            <a href="/delete/user/{{ user.id }}">
-              <span>
-                delete
-              </span>
-            </a>
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+              <a href="/update/{{ user.id }}">
+                <span>
+                  edit
+                </span>
+                <span>
+                  |
+                </span>
+              </a>
+              <a href="/delete/user/{{ user.id }}"
+              >
+                <span>
+                  delete
+                </span>
+              </a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
     <!-- ! TABLE END -->
       <a href="/">
         <button class="btn" type="button">
