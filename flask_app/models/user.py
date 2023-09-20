@@ -16,6 +16,7 @@ class User:
     # ! CREATE
     @classmethod
     def create_user(cls, data):
+        print("create command sent to server from controller.")
         query = """
                 INSERT INTO users (first_name, last_name, email)
                 VALUES (%(first_name)s, %(last_name)s, %(email)s)
@@ -98,6 +99,9 @@ class User:
     def validate_user(user):
         EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
         is_valid = True
+        if User.get_user_by_email(user['email']): # check if the email address already exists in this database
+            flash("Email is already in our system, please try again.")
+            is_valid = False
         if len(user['first_name']) > 0 and len(user['first_name']) <= 2:
             flash("First name must be at least 2 characters. ")
             is_valid = False
@@ -112,11 +116,8 @@ class User:
         if len(user['email']) == 0:
             flash("Cannot leave email field blank.")
             is_valid = False
+            # test whether a field matches the pattern:
         elif not EMAIL_REGEX.match(user['email']):
             flash("Email must be in proper format.")
             is_valid = False
-        # Don't forget to check if the email address already exists in this database. Can only do this, if there is a get_user_by_email method in model
-        if User.get_user_by_email(user['email']):
-            flash("Email is already in our system, please try again.")
-            is_valid = False
-        
+        return is_valid

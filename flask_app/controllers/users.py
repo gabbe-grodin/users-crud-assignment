@@ -9,16 +9,16 @@ def home():
 # ! CREATE
 @app.route('/create/user', methods=['POST'])
 def create_user():
-    # pprint.pp("session!!!!!!!!!!!!!!")
+    print("session!!!!!!!!!!!!!!")
     session['first_name'] = request.form['first_name']
     session['last_name'] = request.form['last_name']
     session['email'] = request.form['email']
-    # print("before!!!!!!!!!")
+    print("before!!!!!!!!!")
     # check if form has valid info:
     if not User.validate_user(request.form):
         return redirect("/")
     User.create_user(request.form)
-    # print("after!!!!!!!!!!!!")
+    print("after!!!!!!!!!!!!")
     return redirect("/users")
 
 # ! READ (all)
